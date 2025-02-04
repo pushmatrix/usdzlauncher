@@ -15,7 +15,7 @@
         .ar-button {
             padding: 16px 32px;
             font-size: 18px;
-            background-color: #4CAF50;
+            background-color: #4a5568;
             color: white;
             border: none;
             border-radius: 8px;
@@ -25,18 +25,21 @@
         }
 
         .ar-button:hover {
-            background-color: #45a049;
+            background-color: #2d3748;
         }
     </style>
 </head>
 <body>
+    <button class="ar-button" id="arButton">View in your space</button>
     <script>
         const assetUrl = new URLSearchParams(window.location.search).get('assetUrl');
         if (assetUrl) {
-            const anchor = document.createElement('a');
-            anchor.setAttribute('rel', 'ar');
-            anchor.setAttribute('href', assetUrl);
-            anchor.click();
+            document.getElementById('arButton').addEventListener('click', () => {
+                const anchor = document.createElement('a');
+                anchor.setAttribute('rel', 'ar');
+                anchor.setAttribute('href', assetUrl);
+                anchor.click();
+            });
         }
     </script>
 </body>
