@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        const assetUrl = new URLSearchParams(window.location.search).get('assetUrl');
+        if (assetUrl) {
+            const anchor = document.createElement('a');
+            anchor.setAttribute('rel', 'ar');
+            anchor.setAttribute('href', assetUrl);
+            anchor.click();
+        }
+    </script>
+</body>
+</html>
